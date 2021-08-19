@@ -21,7 +21,7 @@ function List() {
 			  'Content-Type': 'application/json'
 			}
 		})
-			.then(respon => respon.json())
+			.then(res => res.json())
 			.catch(error => console.error('Error:', error))
 			.then(response => {
 				console.log('Success:', response);
@@ -31,7 +31,7 @@ function List() {
     const refreshAPI = (url) => {
 		fetch(url, {
 				method: 'DELETE',
-			}).then(respon => respon.json())
+			}).then(res => res.json())
 				.catch(error => console.error('Error:', error))
 				.then(response => {
 					console.log('Success:', response)
